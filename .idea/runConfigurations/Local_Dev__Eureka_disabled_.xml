@@ -2,7 +2,8 @@
   <configuration default="false" name="Local Dev (Eureka disabled)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
     <module name="pwr-profile-service" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="de.hbt.pwr.profile.ProfileServiceApplication" />
-    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=localDevNoEureka" />
+    <option name="ACTIVE_PROFILES" value="localDevNoEureka" />
+    <option name="VM_PARAMETERS" value="-Dspring.config.location=$PROJECT_DIR$/../../Power-Configs/profile.yml" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
       <option name="Make" enabled="true" />
