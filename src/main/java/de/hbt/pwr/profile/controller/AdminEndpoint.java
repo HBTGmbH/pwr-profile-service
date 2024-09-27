@@ -17,7 +17,7 @@ import java.util.List;
 
 import static org.springframework.http.ResponseEntity.accepted;
 import static org.springframework.http.ResponseEntity.noContent;
-import static org.springframework.web.bind.annotation.RequestMethod.HEAD;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
 @RequestMapping("/admin")
@@ -45,8 +45,9 @@ public class AdminEndpoint {
             @ApiResponse(code = 403, message = "User is not an admin"),
             @ApiResponse(code = 401, message = "Missing authorization header")
     })
-    @RequestMapping(path = "/", method = HEAD)
+    @RequestMapping(path = "/", method = GET)
     public ResponseEntity isAuthenticated() {
+        System.out.println("isAuthenticated angesprochen");
         return accepted().build();
     }
 
